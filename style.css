@@ -158,3 +158,50 @@ body {
         max-width: 350px;
     }
 }
+
+.learning {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.learning h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.word-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.word {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.translation {
+    font-size: 22px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+#showTranslation {
+    border: none;
+    padding: 14px 25px;
+    background: #6c63ff;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#showTranslation:hover {
+    background: #554bd8;
+}
