@@ -205,3 +205,18 @@ body {
 #showTranslation:hover {
     background: #554bd8;
 }
+
+#favoriteWord {
+    display: block;
+    margin: 0 auto 20px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#favoriteWord:hover {
+    color: #ff4f81;
+}
