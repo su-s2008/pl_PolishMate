@@ -24,31 +24,23 @@ const words = [
 
 
 const word = document.querySelector(".word");
-
 const translation = document.querySelector(".translation");
-
 const showTranslation =
     document.getElementById("showTranslation");
-
 const nextWord =
     document.getElementById("nextWord");
-
 const favoriteWord =
     document.getElementById("favoriteWord");
 
 let currentWord = 0;
-let favorites = [];
+let favorites =JSON.parse(localStorage.getItem("favorites")) || [];
 
 translation.style.display = "none";
 
-
-/* ПОКАЗАТИ ПЕРЕКЛАД */
 showTranslation.addEventListener("click", function () {
     translation.style.display = "block";
 });
 
-
-/* НАСТУПНЕ СЛОВО */
 nextWord.addEventListener("click", function () {
     currentWord++;
     if (currentWord >= words.length) {
@@ -62,13 +54,14 @@ nextWord.addEventListener("click", function () {
     translation.style.display = "none";
 });
 
-
-/* ДОДАТИ У ВИБРАНЕ */
-
 favoriteWord.addEventListener("click", function () {
-    const selectedWord =
-        words[currentWord];
+    const selectedWord = words[currentWord];
     favorites.push(selectedWord);
+
+    localStorage.setItem(
+        "favorites",
+        JSON.stringify(favorites)
+    );
     console.log(favorites);
 
 });
