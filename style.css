@@ -220,3 +220,83 @@ body {
 #favoriteWord:hover {
     color: #ff4f81;
 }
+
+.favorites-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.favorites-page h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.favorites-description {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.favorite-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.favorite-card h2 {
+    margin-bottom: 8px;
+}
+
+.favorite-card p {
+    color: #777;
+    font-size: 18px;
+}
+
+.favorite-card button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.favorite-card button:hover {
+    transform: scale(1.2);
+}
+
+.empty-favorites {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border-radius: 20px;
+}
+
+.empty-favorites h2 {
+    margin-bottom: 10px;
+}
+
+.empty-favorites p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.empty-favorites a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
