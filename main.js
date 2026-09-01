@@ -56,12 +56,21 @@ nextWord.addEventListener("click", function () {
 
 favoriteWord.addEventListener("click", function () {
     const selectedWord = words[currentWord];
-    favorites.push(selectedWord);
+    const alreadyFavorite = favorites.some(function (item) {
 
-    localStorage.setItem(
-        "favorites",
-        JSON.stringify(favorites)
-    );
-    console.log(favorites);
+        return item.polish === selectedWord.polish;
 
+    });
+
+    if (!alreadyFavorite) {
+
+        favorites.push(selectedWord);
+        localStorage.setItem(
+            "favorites",
+            JSON.stringify(favorites)
+        );
+        console.log("Слово додано ⭐");
+    } else {
+        console.log("Це слово вже у вибраному");
+    }
 });
