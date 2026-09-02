@@ -300,3 +300,61 @@ body {
     text-decoration: none;
     border-radius: 10px;
 }
+
+.words-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.words-page h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.words-description {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.search-box {
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 17px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #6c63ff;
+}
+
+.words-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.word-list-card {
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.word-list-card h2 {
+    margin-bottom: 8px;
+}
+
+.word-list-card p {
+    color: #777;
+    font-size: 18px;
+}
