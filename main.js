@@ -25,12 +25,18 @@ const words = [
 
 const word = document.querySelector(".word");
 const translation = document.querySelector(".translation");
-const showTranslation =
-    document.getElementById("showTranslation");
-const nextWord =
-    document.getElementById("nextWord");
-const favoriteWord =
-    document.getElementById("favoriteWord");
+const showTranslation = document.getElementById("showTranslation");
+const nextWord =document.getElementById("nextWord");
+const favoriteWord =document.getElementById("favoriteWord");
+const knowWord =  document.getElementById("knowWord");  
+const progressCount = document.getElementById("progressCount");
+
+let learnedWords = 0;
+knowWord.addEventListener("click", function () {
+learnedWords = learnedWords + 1;
+progressCount.textContent = learnedWords;
+
+});
 
 let currentWord = 0;
 let favorites =JSON.parse(localStorage.getItem("favorites")) || [];
