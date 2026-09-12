@@ -31,14 +31,19 @@ const favoriteWord =document.getElementById("favoriteWord");
 const knowWord =  document.getElementById("knowWord");  
 const progressCount = document.getElementById("progressCount");
 const progressFill = document.getElementById("progressFill");
+const progressTotal = document.getElementById("progressTotal");
 
 let currentWord = 0;
 
 let learned = JSON.parse(localStorage.getItem("learned")) || [];
 let learnedWords = learned.length;
 
+progressTotal.textContent = words.length;
 progressCount.textContent = learnedWords;
-progressFill.style.width = (learnedWords / 10) * 100 + "%";
+progressFill.style.width = (learnedWords / words.length) * 100 + "%";
+
+progressCount.textContent = learnedWords;
+progressFill.style.width = (learnedWords / words.length) * 100 + "%";
 knowWord.addEventListener("click", function () {
     const currentWordText = words[currentWord].polish;
     if (learned.includes(currentWordText)) {
