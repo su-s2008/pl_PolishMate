@@ -32,10 +32,15 @@ const knowWord =  document.getElementById("knowWord");
 const progressCount = document.getElementById("progressCount");
 
 let learnedWords = 0;
+let learned = [];
 knowWord.addEventListener("click", function () {
-learnedWords = learnedWords + 1;
-progressCount.textContent = learnedWords;
-
+    const currentWordText = words[currentWord].polish;
+    if (!learned.include(currentWordText)) {
+        return;
+    }
+        learned.push(currentWordText);
+        learnedWords = learnedWords + 1;
+        progressCount.textContent = learnedWords;
 });
 
 let currentWord = 0;
