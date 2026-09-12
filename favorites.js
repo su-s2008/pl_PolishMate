@@ -1,8 +1,7 @@
 const favoritesList =
     document.getElementById("favoritesList");
 
-let favorites =
-    JSON.parse(localStorage.getItem("favorites")) || [];
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 function displayFavorites() {
     favoritesList.innerHTML = "";
     if (favorites.length === 0) {

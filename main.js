@@ -30,20 +30,27 @@ const nextWord =document.getElementById("nextWord");
 const favoriteWord =document.getElementById("favoriteWord");
 const knowWord =  document.getElementById("knowWord");  
 const progressCount = document.getElementById("progressCount");
+const progressFill = document.getElementById("progressFill");
 
-let learnedWords = 0;
-let learned = [];
+let currentWord = 0;
+
+let learned = JSON.parse(localStorage.getItem("learned")) || [];
+let learnedWords = learned.length;
+
+progressCount.textContent = learnedWords;
+progressFill.style.width = (learnedWords / 10) * 100 + "%";
 knowWord.addEventListener("click", function () {
     const currentWordText = words[currentWord].polish;
-    if (!learned.include(currentWordText)) {
+    if (learned.includes(currentWordText)) {
         return;
     }
         learned.push(currentWordText);
+        localStorage.setItem("learned", JSON.stringify(learned));
         learnedWords = learnedWords + 1;
         progressCount.textContent = learnedWords;
+        progressFill.style.width = (learnedWords /10) * 100 +"%";
 });
 
-let currentWord = 0;
 let favorites =JSON.parse(localStorage.getItem("favorites")) || [];
 
 translation.style.display = "none";
