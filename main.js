@@ -42,8 +42,13 @@ progressTotal.textContent = words.length;
 progressCount.textContent = learnedWords;
 progressFill.style.width = (learnedWords / words.length) * 100 + "%";
 
-progressCount.textContent = learnedWords;
-progressFill.style.width = (learnedWords / words.length) * 100 + "%";
+setTimeout(function () {
+    currentWord = Math.floor(Math.random() * words.length);
+    word.textContent = words[currentWord].polish;
+    translation.textContent = words[currentWord].ukrainian;
+    translation.style.display = "none";
+}, 300);
+
 knowWord.addEventListener("click", function () {
     const currentWordText = words[currentWord].polish;
     if (learned.includes(currentWordText)) {
