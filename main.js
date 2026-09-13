@@ -43,7 +43,17 @@ progressCount.textContent = learnedWords;
 progressFill.style.width = (learnedWords / words.length) * 100 + "%";
 
 setTimeout(function () {
-    currentWord = Math.floor(Math.random() * words.length);
+let availableWords = words.filter(function (item) {
+    return !learned.includes(item.polish);
+});
+if (availableWords.length === 0) {
+    word.textContent = "Ви вивчили всі слова! ";
+    translation.textContent = "Ти чудово впорався!";
+    translation.style.display = "block";
+    return;
+}
+const randomWord = availableWords[Math.floor(Math.random() * availableWords.length)];
+currentWord = words.indexOf(randomWord);
     word.textContent = words[currentWord].polish;
     translation.textContent = words[currentWord].ukrainian;
     translation.style.display = "none";
