@@ -35,30 +35,96 @@
 
 </section>
 <section class="categories">
+<section class="plmat-section">
+    <div class="section-header">
+        <h2>Чим PLMAT може допомогти?</h2>
 
-    <h2>Вивчай польську за ситуаціями</h2>
+        <p>
+            Обери тему та знайди просте пояснення,
+            необхідні документи та наступні кроки.
+        </p>
+    </div>
 
-    <div class="category-list">
+    <div class="plmat-categories">
 
-        <div class="category-card">
-            <div class="category-icon">🇵🇱</div>
-            <h3>Повсякденне</h3>
-            <p>25 фраз</p>
+        <div class="plmat-category" data-category="documents">
+            <div class="plmat-icon">📄</div>
+
+            <h3>Документи</h3>
+
+            <p>
+                PESEL, karta pobytu, meldunek та інші документи.
+            </p>
+
+            <button>Переглянути</button>
         </div>
 
-        <div class="category-card">
-            <div class="category-icon">🏥</div>
-            <h3>У лікаря</h3>
-            <p>18 фраз</p>
-        </div>
 
-        <div class="category-card">
-            <div class="category-icon">💼</div>
+        <div class="plmat-category" data-category="work">
+            <div class="plmat-icon">💼</div>
+
             <h3>Робота</h3>
-            <p>30 фраз</p>
+
+            <p>
+                Працевлаштування, договори, зарплата та права.
+            </p>
+
+            <button>Переглянути</button>
+        </div>
+
+
+        <div class="plmat-category" data-category="housing">
+            <div class="plmat-icon">🏠</div>
+
+            <h3>Житло</h3>
+
+            <p>
+                Оренда квартири, договір, депозит та проживання.
+            </p>
+
+            <button>Переглянути</button>
+        </div>
+
+
+        <div class="plmat-category" data-category="medicine">
+            <div class="plmat-icon">🏥</div>
+
+            <h3>Медицина</h3>
+
+            <p>
+                Лікарі, NFZ, рецепти та медична допомога.
+            </p>
+
+            <button>Переглянути</button>
+        </div>
+        <div class="plmat-category" data-category="education">
+            <div class="plmat-icon">🎓</div>
+            <h3>Освіта</h3>
+            <p>
+                Школа, technikum, університет та навчання.
+            </p>
+            <button>Переглянути</button>
+        </div>
+        <div class="plmat-category" data-category="polish">
+            <div class="plmat-icon">💬</div>
+            <h3>Польська</h3>
+            <p>
+                Корисні фрази для urzędu, лікаря, роботи та інших ситуацій.
+            </p>
+            <button>Переглянути</button>
         </div>
 
     </div>
+    <section class="topics-section">
+    <div class="topics-container">
+
+        <h2 id="topicsTitle">Оберіть категорію</h2>
+
+        <div id="topicsList" class="topics-list"></div>
+
+    </div>
+</section>
+</section>
 
 </section>
 
@@ -91,7 +157,7 @@
 </div>
     </div>
 </section>
-
+    <script src="topics.js"></script>
     <script src="main.js"></script>
 
 </body>

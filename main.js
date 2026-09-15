@@ -57,6 +57,7 @@ currentWord = words.indexOf(randomWord);
     word.textContent = words[currentWord].polish;
     translation.textContent = words[currentWord].ukrainian;
     translation.style.display = "none";
+    updateFavoriteButton();
 }, 300);
 
 knowWord.addEventListener("click", function () {
@@ -90,6 +91,7 @@ nextWord.addEventListener("click", function () {
     translation.textContent =
         words[currentWord].ukrainian;
     translation.style.display = "none";
+    updateFavoriteButton();
 });
 
 favoriteWord.addEventListener("click", function () {
@@ -107,8 +109,27 @@ favoriteWord.addEventListener("click", function () {
             "favorites",
             JSON.stringify(favorites)
         );
+
+        updateFavoriteButton();        
+
         console.log("Слово додано ⭐");
     } else {
         console.log("Це слово вже у вибраному");
     }
+});
+
+const plmatCategories = document.querySelectorAll(".plmat-category");
+
+plmatCategories.forEach(function (categoryCard) {
+    const button = categoryCard.querySelector("button");
+
+    button.addEventListener("click", function () {
+
+        const category = categoryCard.dataset.category;
+        const filteredTopics = topics.filter(function (topic) {
+            return topic.category === category;
+        });
+        console.log(filteredTopics);
+    });
+
 });
