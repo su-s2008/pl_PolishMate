@@ -1,48 +1,93 @@
+
+
 const topics = [
     {
-        id: "pesel",
-        category: "documents",
-        title: "PESEL",
-        icon: "📄",
-        description: "Інформація про номер PESEL у Польщі.",
-        keywords: [
-            "pesel",
-            "номер",
-            "ідентифікаційний номер"
-        ],
-        steps: [],
-        documents: [],
-        whereToGo: [],
-        polishPhrases: [],
-        source: {
-            name: "",
-            url: "",
-            checkedAt: null
+    id: "pesel",
+    category: "documents",
+    title: "PESEL",
+    icon: "📄",
+    description:
+        "PESEL — це 11-значний ідентифікаційний номер, який використовується в Польщі. Для іноземців спосіб його отримання залежить від ситуації.",
+    keywords: [
+        "pesel",
+        "номер pesel",
+        "ідентифікаційний номер",
+        "номер",
+        "pesel ukr",
+        "ukr"
+    ],
+    steps: [
+        "Перевір, чи отримуєш PESEL автоматично через meldunek або чи тобі потрібно подати заяву.",
+        "Підготуй документ, який підтверджує твою особу та дані.",
+        "Заповни заяву на отримання номера PESEL.",
+        "Подай заяву у відповідному urzędzie gminy."
+    ],
+    documents: [
+        "Заява на отримання номера PESEL.",
+        "Документ, який підтверджує особу та дані, зазначені в заяві."
+    ],
+    whereToGo: [
+        "Urząd gminy."
+    ],
+    polishPhrases: [
+        {
+            polish: "Chciałbym uzyskać numer PESEL.",
+            ukrainian: "Я хотів би отримати номер PESEL."
+        },
+        {
+            polish: "Chciałbym złożyć wniosek o nadanie numeru PESEL.",
+            ukrainian: "Я хотів би подати заяву на отримання номера PESEL."
         }
-    },
-
-    {
-        id: "karta-pobytu",
-        category: "documents",
-        title: "Karta pobytu",
-        icon: "📄",
-        description: "Основна інформація про карту побиту.",
-        keywords: [
-            "karta pobytu",
-            "карта побиту",
-            "побит",
-            "дозвіл на проживання"
-        ],
-        steps: [],
-        documents: [],
-        whereToGo: [],
-        polishPhrases: [],
-        source: {
-            name: "",
-            url: "",
-            checkedAt: null
+    ],
+    source: {
+        name: "Gov.pl — Uzyskaj numer PESEL – usługa dla cudzoziemców",
+        url: "https://www.gov.pl/web/gov/uzyskaj-numer-pesel--usluga-dla-cudzoziemcow-ua",
+        checkedAt: "16.09.2026"
+    }
+},
+{
+    id: "pesel-ukr",
+    category: "documents",
+    title: "PESEL UKR",
+    icon: "📄",
+    description:
+        "Інформація про PESEL зі статусом UKR та пов'язані з ним правила для громадян України.",
+    keywords: [
+        "pesel ukr",
+        "ukr",
+        "статус ukr",
+        "українці",
+        "тимчасовий захист"
+    ],
+    steps: [
+        "Перевір, чи маєш актуальний статус UKR.",
+        "Перевір, чи твої персональні дані та документ посвідчення особи актуальні.",
+        "Якщо твою особу потрібно підтвердити документом, звернися до органу гміни.",
+        "Перед поданням або зміною даних перевір актуальні вимоги на офіційному сайті."
+    ],
+    documents: [
+        "Документ, що посвідчує особу.",
+        "Інші документи залежно від конкретної ситуації."
+    ],
+    whereToGo: [
+        "Urząd gminy — у випадках, коли потрібно підтвердити або оновити дані."
+    ],
+    polishPhrases: [
+        {
+            polish: "Chciałbym sprawdzić mój status UKR.",
+            ukrainian: "Я хотів би перевірити мій статус UKR."
+        },
+        {
+            polish: "Chciałbym potwierdzić swoją tożsamość.",
+            ukrainian: "Я хотів би підтвердити свою особу."
         }
-    },
+    ],
+    source: {
+        name: "Urząd do Spraw Cudzoziemców / Urząd Wojewódzki",
+        url: "https://www.gov.pl/web/udsc/wazna-informacja-dla-obywateli-ukrainy-posiadajacych-numer-pesel-ze-statusem-ukr",
+        checkedAt: "16.09.2026"
+    }
+},
 
     {
         id: "meldunek",
