@@ -725,3 +725,27 @@ body {
     }
 
 }
+
+.plmat-search {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.plmat-search input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 16px 20px;
+
+    border: 1px solid #dfe2ea;
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.plmat-search input:focus {
+    border-color: #6c63ff;
+}
