@@ -184,26 +184,8 @@ if (
 
 }
 
-const plmatCategories =
-    document.querySelectorAll(".plmat-category");
-
-const topicsList =
-    document.getElementById("topicsList");
-
-const topicsTitle =
-    document.getElementById("topicsTitle");
-
-const plmatSearch =
-    document.getElementById("plmatSearch");
-
-const plmatCategories =
-    document.querySelectorAll(".plmat-category");
-
-const topicsList =
-    document.getElementById("topicsList");
-
-const topicsTitle =
-    document.getElementById("topicsTitle");
+const plmatCategories = document.querySelectorAll(".plmat-category");
+const topicsTitle = document.getElementById("topicsTitle");
 
 const plmatSearch =
     document.getElementById("plmatSearch");
