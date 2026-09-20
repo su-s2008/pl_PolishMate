@@ -339,25 +339,19 @@ if (
                     const category =
                         categoryCard.dataset.category;
 
-
                     showCategoryTopics(
                         category
                     );
-
-
                     topicsTitle.textContent =
                         categoryCard.querySelector(
                             "h3"
                         ).textContent;
 
-
                     topicsList.scrollIntoView({
                         behavior: "smooth"
                     });
-
                 }
             );
-
         }
     );
 
@@ -367,18 +361,11 @@ if (
             topics.filter(function (topic) {
 
                 return topic.category === category;
-
             });
-
-
         topicsList.innerHTML = "";
-
-
         filteredTopics.forEach(function (topic) {
 
-            const topicCard =
-                document.createElement("div");
-
+            const topicCard = document.createElement("div");
 
             topicCard.classList.add(
                 "topic-card"
@@ -389,40 +376,30 @@ if (
                 <div class="topic-icon">
                     ${topic.icon}
                 </div>
-
                 <h3>
                     ${topic.title}
                 </h3>
-
                 <p>
                     ${topic.description}
                 </p>
-
                 <button class="open-topic">
                     Відкрити
                 </button>
             `;
-
-
             topicsList.appendChild(
                 topicCard
             );
-
-
             topicCard
                 .querySelector(".open-topic")
                 .addEventListener(
                     "click",
                     function () {
-
                         openTopic(topic);
-
                     }
                 );
-
         });
-
     }
+
     function openTopic(topic) {
         topicsTitle.textContent =
             topic.title;
@@ -844,5 +821,3 @@ if (
             }
         );
     }
-
-}
