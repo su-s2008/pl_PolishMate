@@ -152,13 +152,21 @@
         </div>
     </section>
     <section class="topics-section">
-        <div class="topics-container">
-            <div class="plmat-search">
-    <input
-        type="text"
-        id="plmatSearch"
-        placeholder="Наприклад: PESEL, лікар, робота...">
-</div>
+    <div class="topics-container">
+        <div class="topics-header">
+            <h2 id="topicsTitle">
+                Оберіть категорію
+            </h2>
+            <input
+                type="text"
+                id="plmatSearch"
+                class="plmat-search"
+                placeholder="Пошук тем..."
+                autocomplete="off">
+        </div>
+        <div id="topicsList" class="topics-list"></div>
+    </div>
+</section>
             <h2 id="topicsTitle">
                 Оберіть категорію
             </h2>
@@ -204,6 +212,7 @@
         </div>
     </section>
     <script src="/JavaScript/topics.js"></script>
+    <script src="/JavaScript/source.js"></script>
 <script src="/JavaScript/main.js"></script>
 </body>
 </html>
